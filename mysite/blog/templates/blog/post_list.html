@@ -1,31 +1,7 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static 'css/stijl.css' %}" />
-    <title>Mijn website</title>
-  </head>
-  <body>
-    <!-- Bovenste gele sectie -->
-    <div class="section yellow top-section">
-      <h1>Mijn website</h1>
-    </div>
-
-    <!-- Middelste rode sectie -->
-    <div class="section red middle-section">
-      <div class="blogs">
-        {% block content %} {% for post in posts %}
-        <article class="post">
-          <time class="date">{{ post.published_date }}</time>
-          <h2><a href="">{{ post.title }}</a></h2>
-          <p>{{ post.text|linebreaksbr }}</p>
-        </article>
-        {% endfor %} {% endblock %}
-      </div>
-    </div>
-
-    <!-- Onderste gele sectie -->
-    <div class="section yellow bottom-section"></div>
-  </body>
-</html>
+{% extends 'blog/base.html' %}{% block inhoud %}{% for post in posts %}
+<article class="post">
+  <time class="date">{{ post.published_date }}</time>
+  <h2><a href="{% url 'post_inhoud' pk=post.pk %}">{{ post.title }}</a></h2>
+  <p>{{ post.text|linebreaksbr }}</p>
+</article>
+{% endfor %}{% endblock %}

@@ -1,38 +1,39 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #9d2b2b;
 }
 
 /* Algemene secties */
-.section {
-  padding: 20px;
+section {
+  margin: 20px;
 }
 
-.yellow {
+/* Gele header (was .yellow) */
+header {
   background-color: #f4a300; /* warm geel */
   padding: 50px;
 }
 
-.red {
-  background-color: #9d2b2b; /* donker rood */
-  color: white;
-}
-
-/* Titel boven */
-.top-section h1 {
+/* Titel boven (was .top-section h1) */
+header h1 {
   margin: 0;
   font-size: 2rem;
   color: #000; /* zwart voor contrast */
 }
 
-/* Blogs container */
-.blogs {
+header a {
+  color: black;
+}
+
+/* Blogs container (was .blogs) */
+section {
   max-width: 550px; /* smal kolomformaat */
   background-color: #f3c1c1;
 
   /* Uitlijning naar rechts */
-  margin-left: auto; /* auto marge aan de linkerzijde */
-  margin-right: 150px; /* 50px ruimte van de rechterrand */
+  margin-left: auto;
+  margin-right: 150px;
 }
 
 /* Post kaarten */
@@ -64,7 +65,11 @@ body {
   text-decoration: underline;
 }
 
-/* Footer */
-.bottom-section {
+/* Rode footer (was .red en .bottom-section) */
+footer {
+  background-color: #f4a300; /* donker rood */
+  height: 150px;
+  color: white;
   font-size: 0.9rem;
+  padding: 20px;
 }

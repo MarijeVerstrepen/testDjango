@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/stijl.css' %}" />
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>Mijn website</h1>
+      <br /><a href="{% url 'post_nieuw' %}" class="top-menu">Post schrijven</a>
+    </header>
+    <section>{% block inhoud %}{% endblock %}</section>
+    <footer></footer>
+  </body>
+</html>
