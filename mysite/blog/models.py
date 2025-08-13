@@ -15,16 +15,16 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-class Voetbalspelers(models.Model):
-    auteur = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    naam = models.CharField(max_length=200)
-    actuele_club = models.CharField(max_length=200)
-    datum_invoer = models.DateTimeField(default=timezone.now)
-    laatste_aanpassing = models.DateTimeField(blank=True, null=True)
+# class Voetbalspelers(models.Model):
+#     auteur = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+#     naam = models.CharField(max_length=200)
+#     actuele_club = models.CharField(max_length=200)
+#     datum_invoer = models.DateTimeField(default=timezone.now)
+#     laatste_aanpassing = models.DateTimeField(blank=True, null=True)
 
-    def publiceer(self):
-        self.laatste_aanpassing = timezone.now()
-        self.save()
+#     def publiceer(self):
+#         self.laatste_aanpassing = timezone.now()
+#         self.save()
 
-    def __str__(self):
-        return self.naam
+#     def __str__(self):
+#         return self.naam
