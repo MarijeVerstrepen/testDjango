@@ -1,14 +1,70 @@
 body {
-  background-color: orange;
-  color: black;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
+/* Algemene secties */
+.section {
+  padding: 20px;
+}
+
+.yellow {
+  background-color: #f4a300; /* warm geel */
+  padding: 50px;
+}
+
+.red {
+  background-color: #9d2b2b; /* donker rood */
   color: white;
 }
 
-article {
-  width: 500px;
-  margin-bottom: 40px;
-  border: 3px solid red;
+/* Titel boven */
+.top-section h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #000; /* zwart voor contrast */
+}
+
+/* Blogs container */
+.blogs {
+  max-width: 550px; /* smal kolomformaat */
+  background-color: #f3c1c1;
+
+  /* Uitlijning naar rechts */
+  margin-left: auto; /* auto marge aan de linkerzijde */
+  margin-right: 150px; /* 50px ruimte van de rechterrand */
+}
+
+/* Post kaarten */
+.post {
+  background-color: #f3c1c1; /* lichtroze/roodwit */
+  padding: 15px;
+  margin-bottom: 35px;
+  border: 3px solid white;
+  color: black;
+}
+
+/* Datum */
+.post .date {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* Post titel */
+.post h2 {
+  margin: 5px 0 10px 0;
+  font-size: 30px;
+}
+
+.post h2 a {
+  color: orange;
+}
+
+.post h2 a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.bottom-section {
+  font-size: 0.9rem;
 }
